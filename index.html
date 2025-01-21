@@ -13,16 +13,21 @@
 
     <!-- Inline CSS -->
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-image: url("floral.gif");
-        background-size: cover;
-        background-position: center;
-        margin: 0;
-        padding: 0;
-        color: white;
-        text-align: center;
-      }
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("floral.gif");
+      background-size: cover; /* Memastikan gambar menyesuaikan layar */
+      background-repeat: no-repeat; /* Mencegah gambar diulang */
+      background-attachment: fixed; /* Membuat gambar tetap saat halaman digulir */
+      background-position: center; /* Memusatkan gambar */
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* Memastikan elemen body memiliki tinggi 100% layar */
+      width: 100vw; /* Memastikan elemen body memiliki lebar 100% layar */
+      overflow: hidden; /* Mencegah scroll jika ada kelebihan */
+      color: white;
+      text-align: center;
+    }
 
       #Content {
         margin-top: 20%;
