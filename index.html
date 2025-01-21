@@ -7,7 +7,132 @@
     rel="preconnect"
     href="https://fonts.gstatic.com"
     crossorigin
-  /><link
+  /><link<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
+    />
+    <title>Hello :D</title>
+
+    <!-- SweetAlert2 Library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Inline CSS -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://i.imgur.com/qIufhof.jpg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-align: center;
+      }
+
+      #Content {
+        margin-top: 20%;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .image img {
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Content">
+      <div class="image">
+        <img
+          src="https://i.imgur.com/5ntdyDd.gif"
+          alt="Peachcat and Goma"
+          width="130"
+          height="130"
+        />
+      </div>
+      <blockquote>
+        <p id="text"></p>
+        <p id="text2"></p>
+      </blockquote>
+    </div>
+
+    <script>
+      // Function to play audio
+      function play() {
+        const audio = new Audio("bg.mp3");
+        audio.play();
+      }
+
+      // SweetAlert2 sequence
+      async function mulaitanya() {
+        const { isConfirmed } = await Swal.fire({
+          title: "Halo :D Klik tombol di bawah ya!",
+          imageUrl: "https://i.imgur.com/5ntdyDd.gif",
+          imageWidth: 120,
+          imageHeight: 120,
+          confirmButtonText: "Okay",
+        });
+
+        if (isConfirmed) {
+          play(); // Play the song
+          await kuis();
+        }
+      }
+
+      // SweetAlert2 quiz flow
+      async function kuis() {
+        await Swal.fire({
+          title: "Lelah ya hari ini? :(",
+          imageUrl: "https://i.imgur.com/9g6l8HU.gif",
+          imageWidth: 120,
+          imageHeight: 120,
+          timer: 3000,
+          showConfirmButton: false,
+        });
+
+        await Swal.fire({
+          title: "Selamat ya, kamu udah lewatin semuanya!",
+          imageUrl: "https://i.imgur.com/VB0AALb.gif",
+          imageWidth: 120,
+          imageHeight: 120,
+          timer: 3000,
+          showConfirmButton: false,
+        });
+
+        await Swal.fire({
+          title: "Jangan lupa minum air ya!",
+          imageUrl: "https://i.imgur.com/Ugy6lKm.gif",
+          imageWidth: 120,
+          imageHeight: 120,
+          timer: 3000,
+          showConfirmButton: false,
+        });
+
+        await Swal.fire({
+          title: "Maaf, aku hanya bisa support kamu aja 💕",
+          imageUrl: "https://i.imgur.com/DqxC5xO.gif",
+          imageWidth: 120,
+          imageHeight: 120,
+          timer: 3000,
+          showConfirmButton: false,
+        });
+
+        // Update the text content
+        document.getElementById("text").innerHTML = "You always be my sweetheart ❤️";
+        document.getElementById("text2").innerHTML =
+          "Jaga diri baik-baik... Jangan sedih, kita ketemu nanti :)";
+      }
+
+      // Start the sequence
+      mulaitanya();
+    </script>
+  </body>
+</html>
+
     href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
     rel="stylesheet"
   />
